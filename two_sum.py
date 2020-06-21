@@ -3,6 +3,7 @@ from typing import List
 
 class TwoSum:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # key num,v:i
         map = {}
         for index, num in enumerate(nums):
             map[num] = index
@@ -10,7 +11,6 @@ class TwoSum:
             j = map.get(target - n)
             if j is not None and i != j:
                 return [i, j]
-
 
 if __name__ == '__main__':
     t = TwoSum()
